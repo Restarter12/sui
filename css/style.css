@@ -1,0 +1,738 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  background-color: #333333;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  height: 100px;
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.call-icon {
+  padding: 10px;
+}
+
+.call-icon img {
+  max-height: 40px; /* Adjust the height of the call icon as needed */
+  cursor: pointer;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  /* Изменение цвета текста на белый */
+}
+
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+
+.hero {
+  position: relative;
+  background-image: url(../images/her.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 100px 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  mix-blend-mode: multiply;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  /* Чтобы контент был поверх псевдоэлементов */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ff9800;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f57c00;
+}
+
+.services {
+  background-color: #716565;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+
+
+.service {
+  background-color: #dfc5c5;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.poizon {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.service-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+  text-align: right;
+}
+.company-name {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.service p {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.service.hovered {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.icon-soc {
+  width: 50px;
+  height: 50px;
+}
+
+.delivery-types {
+  background-color: #f7f7f7;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.delivery-types h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.delivery-types-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  /* Изменено */
+}
+
+.delivery-type {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 300px;
+  /* Ширина каждого пункта доставки */
+  margin-right: 20px;
+  /* Отступ между пунктами доставки */
+}
+
+/* Добавление скроллбара со стрелками */
+.delivery-types-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.delivery-types-grid::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 4px;
+}
+
+.delivery-types-grid::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.deli {
+  width: 100px;
+  height: 100px;
+}
+
+.delivery-type h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.delivery-type p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+
+
+/* Определение стилей для класса .hovered */
+.hovered {
+  background-color: #ff9800;
+  /* Измените цвет фона по вашему выбору */
+  color: #000;
+  /* Измените цвет текста по вашему выбору */
+  /* Дополнительные стили для анимации при наведении */
+  transition: background-color 0.3s ease;
+}
+
+/* Определение стилей для класса .deli */
+.deli {
+  /* Дополнительные стили для анимации при наведении */
+  transition: transform 0.3s ease;
+}
+
+/* Определение стилей для класса .deli при наведении */
+.deli:hover {
+  transform: scale(1.1);
+  /* Изменение масштаба элемента при наведении */
+}
+
+/* Определение стилей для класса .icon-soc */
+.icon-soc {
+  /* Дополнительные стили для анимации при наведении */
+  transition: transform 0.3s ease;
+}
+
+/* Определение стилей для класса .icon-soc при наведении */
+.icon-soc:hover {
+  transform: scale(1.2);
+  /* Изменение масштаба элемента при наведении */
+}
+
+/* Определение стиля для раздела "О нас" */
+#about {
+  background-color: #fff;
+  color: #333;
+  padding: 50px;
+}
+
+#about h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.centered {
+  text-align: center;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Приимущества */
+.advantages {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  position: relative;
+}
+
+.advantage {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 100%;
+  background-color: #ff9800;
+}
+
+.advantage:first-child .line {
+  display: none;
+}
+
+.advan {
+  width: 100px;
+  height: 100px;
+}
+
+.advantages .advantage:hover .circle::before {
+  background-color: #ff9800;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+}
+
+.advantages .advantage:hover img {
+  transform: translate3d(0, -10px, 0);
+}
+
+.advantage::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  z-index: -1;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.advantage h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.advantage p {
+  font-size: 14px;
+  color: #333333;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+.scroll-to-top:hover {
+  background-color: #f57c00;
+}
+
+.social-media li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-media li a:hover {
+  color: #ff9800;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex;
+  /* используем flex для центрирования содержимого */
+  align-items: center;
+  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Увеличиваем высоту полосок */
+  background-color: #fff; /* Устанавливаем цвет полосок */
+  transition: background-color 0.3s; /* Добавляем плавный переход при изменении цвета */
+}
+
+.menu__btn:hover > span,
+.menu__btn:hover > span::before,
+.menu__btn:hover > span::after {
+  background-color: #ff9800;
+}
+
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Обновленные стили для меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  z-index: 9999;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #333333;
+  /* Изменено на цвет фона меню */
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  /* Изменено на цвет текста пунктов меню */
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.menu__item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.menu__item a:hover {
+  color: #ff9800;
+}
+
+.menu__item:hover {
+  background-color: #4f4f4f;
+  /* Изменено на цвет фона при наведении */
+}
+
+#menu__toggle:checked~.menu__btn>span {
+  transform: rotate(45deg);
+  z-index: 9999;
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+  top: 0;
+  transform: rotate(0);
+  z-index: 9999;
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+  top: 0;
+  z-index: 9999;
+  transform: rotate(90deg);
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* Увеличиваем размер трех полосок */
+  width: 30px;
+  height: 30px;
+}
+
+#menu__toggle:checked~.menu__box {
+  visibility: visible;
+  z-index: 9999;
+  left: 0;
+}
+
+form {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #f57c00;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Медиа-запрос для экранов шириной до 768px */
+
+  .container {
+    padding: 10px;
+  }
+
+  header nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  .service {
+    padding: 20px;
+  }
+
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Медиа-запрос для экранов шириной до 480px */
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    padding: 10px;
+  }
+
+  .service h3 {
+    font-size: 18px;
+  }
+
+  .service p {
+    font-size: 12px;
+  }
+}
+
+
+
+
