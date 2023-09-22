@@ -1,0 +1,176 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/avto.png">
+        <link rel="stylesheet" href="css/style.css">
+        <title>ExpTrans</title>
+    </head>
+
+    <body>
+        <!-- Хедер -->
+        <header>
+            <div class="header-container">
+                <!-- Поменяли местами надпись и кнопку меню -->
+                    <!-- Your logo image goes here -->
+                <img class="logo img" src="images/logo-3.svg" alt="ExpTrans Logo">
+                <input type="checkbox" id="menu__toggle" />
+                <label for="menu__toggle" class="menu__btn">
+                    <span></span>
+                </label>
+            <!-- Остальной код без изменений -->
+            <div class="menu__box">
+                <div class="menu__close-btn" onclick="closeMenu()">&times;</div>
+                <ul class="menu__list">
+                <li class="menu__item"><a href="#about">О нас</a></li>
+                <li class="menu__item"><a href="#services">Услуги</a></li>
+                <li class="menu__item"><a href="#delivery-types">Типы доставки</a></li>
+                <li class="menu__item"><a href="#advantages">Преимущества</a></li>
+                </ul>
+            </div>
+            <div class="call-icon">
+                <a href="tel:+1234567890">
+                    <img src="images/phone-1.png" alt="Call Icon">
+                </a>
+            </div>
+            </div>
+        </header>     
+        <!-- Начало сайта  -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="fade-in">Добро пожаловать на сайт ExpTrans!</h1>
+                    <p class="fade-in">Здесь вы можете заказать доставку товаров из Китая.</p>
+                    <a href="#about" class="btn fade-in">Узнать больше</a>
+                </div>
+            </div>
+        </section>
+        <!-- Доставка -->
+        <section class="delivery-types" id="delivery-types">
+            <div class="container">
+                <h2 class="fade-in">Виды доставки</h2>
+                <div class="delivery-types-grid">
+                    <div class="delivery-type fade-in">
+                        <img class="deli" src="images/avia.png" alt="Delivery Type 1">
+                        <h3>Авиа</h3>
+                        <p>Минимальный вес - 10кг <br>Страхование - присутствует <br> Доставка: 9-13 дней</p>
+                    </div>
+                    <div class="delivery-type fade-in">
+                        <img class="deli" src="images/avto.png" alt="Delivery Type 2">
+                        <h3>Авто</h3>
+                        <p>Минимальный вес - 20кг <br>Страхование - присутствует <br> Доставка: 35-40 дней</p>
+                    </div>
+                    <div class="delivery-type fade-in">
+                        <img class="deli" src="images/avto-eksp.png" alt="Delivery Type 3">
+                        <h3>Авто-экспресс</h3>
+                        <p>Минимальный вес - 20кг <br>Страхование - присутствует <br> Доставка: 15-20 дней</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Преимущества -->
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <h2 class="section-title">Наши преимущества</h2>
+                <div class="advantages-grid">
+                    <div class="advantage">
+                        <img class="advan" src="images/kurer.png" alt="Преимущество 1">
+                        <h3>Оплата при получении</h3>
+                        <p>Платите после</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="advantage">
+                        <img class="advan" src="images/oper.png" alt="Преимущество 2">
+                        <h3>Быстрая обратная связь</h3>
+                        <p>На все вопросы ответим быстро</p>
+                    </div>
+                    <div class="advantage">
+                        <img class="advan" src="images/phone-camer.png" alt="Преимущество 3">
+                        <h3>Фото отчет</h3>
+                        <p>Прозрачные фотоотчеты для контроля доставки</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="advantage">
+                        <img class="advan" src="images/checking.png" alt="Преимущество 4">
+                        <h3>Контроль качества</h3>
+                        <p>Собственный штат экспертов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Услуги -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="fade-in">Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service fade-in" onclick="showNotification('Вы выбрали услугу Poizon')">
+                        <img class="poizon" src="images/jO5DXYWWdx8.jpg" alt="Service 1">
+                        <h3>Poizon</h3>
+                        <p>Выкуп с Poizon(Dewu) и доставка в Россию</p>
+                    </div>
+                    <div class="service fade-in" onclick="showNotification('Вы выбрали услугу Проверка товаров в Китае')">
+                        <img class="poizon" src="images/tovar.png" alt="Service 2">
+                        <h3>Проверка товаров в Китае</h3>
+                        <p>Проверка качества и количества вашего товара в Китае</p>
+                    </div>
+                    <div class="service fade-in" onclick="showNotification('Вы выбрали услугу Поиск товаров в Китае')">
+                        <img class="poizon" src="images/taobao_logo_icon_147230.png" alt="Service 3">
+                        <h3>Поиск товаров в Китае</h3>
+                        <p>Выкуп товаров на Taobao.com, Pinduoduo.com и 1688.com</p>
+                    </div>
+                    <div class="service fade-in" onclick="showNotification('Вы выбрали услугу Проверка товаров в Китае')">
+                        <img class="poizon" src="images/lupa.png" alt="Service 2">
+                        <h3>Проверка товаров в Китае</h3>
+                        <p>Переупаковка и дополнительная упаковка ваших товаров в Китае</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма заполнения -->
+        <form action="ajax.php" method="post">
+            <input type="text" name="name" placeholder="Укажите имя" required>
+            <input type="text" name="email" placeholder="Укажите e-mail" required>
+            <input type="text" name="phone" placeholder="Укажите номер" required>
+            <input type="submit" value="Отправить">
+        </form>
+        <!-- О нас -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="centered fade-in">О нас</h2>
+                <p class="fade-in">Наша компания предлагает широкий спектр услуг по доставке грузов. Мы обеспечиваем
+                    надежную и быструю доставку с минимальными затратами для наших клиентов. Наша команда профессионалов
+                    готова взять на себя все хлопоты по доставке на себя. С нами ваш груз будет в надежных руках. <br> Мы
+                    стремимся обеспечить высокий уровень сервиса и удовлетворить потребности наших клиентов, предоставляя
+                    надежные и эффективные решения для их бизнеса. Мы гарантируем безопасность и сохранность ваших грузов на
+                    протяжении всего процесса доставки. <br> Работая с нами, вы можете быть уверены в качестве наших услуг и
+                    надежности нашей компании. Мы готовы принять любые вызовы и выполнить доставку в любую точку мира.
+                    Доверьте нам свои грузы, и мы сделаем все возможное, чтобы доставить их вовремя и в сохранности.</p>
+            </div>
+        </section>
+        <!-- Футер -->
+        <footer id="contacts">
+            <div class="container">
+                <ul class="social-media">
+                    <a target="_blank" href="https://instagram.com/exp_trans?igshid=MzRlODBiNWFlZA=="><img class="icon-soc"
+                            src="images/instagram.png" alt=""></a>
+                    <a target="_blank" href="https://web.telegram.org/k/#@murayus"><img class="icon-soc"
+                            src="images/telegram.png" alt=""></a>
+                    <a target="_blank" href="mailto:ahi.10000@mail.ru"><img class="icon-soc" src="images/email.png"
+                            alt=""></a>
+                </ul>
+                <p>&copy; 2023 Компания "ExpTrans".</p>
+            </div>
+        </footer>
+        <a href="#hero" class="scroll-to-top">↑</a>
+        <!-- Java -->
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js./main.js"></script>
+        
+    
+    </body>
+
+    </html>
